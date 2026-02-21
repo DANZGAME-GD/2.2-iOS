@@ -11,7 +11,7 @@ async function main() {
 
     const BASE_IPA_NAME = ICREATE_MODE ? "icreate.ipa" : "base.ipa";
     const BASE_IPA_LINK = ICREATE_MODE ? "https://objectstorage.us-phoenix-1.oraclecloud.com/n/axe9yayefpvx/b/iCreateVersions/o/iCreatePro_6.7.1.ipa" : "https://us-east-1.tixte.net/uploads/files.141412.xyz/base.ipa";
-    const BASE_BUNDLE_ID = ICREATE_MODE ? "com.camila314.icreate" : "com.gdpssxx.johnrickgdps";
+    const BASE_BUNDLE_ID = ICREATE_MODE ? "com.camila314.icreate" : "com.robtopx.geometryjump";
 
     console.log("2.2 maker for iOS - https://dimisaio.be\n");
     if (ICREATE_MODE) console.log("iCreate Pro mode\n");
@@ -64,7 +64,7 @@ async function main() {
     await fs.promises.writeFile(`${path}/Info.plist`, plist, 'utf8');
         
     var gd = await fs.promises.readFile(`${path}/${name}`, 'binary');
-    gd = gd.replaceAll(BASE_BUNDLE_ID, bundle).replaceAll("https://www.rickgdps.xyz/datastore", url).replaceAll("aHR0cHM6Ly93d3cucmlja2dkcHMueHl6L2RhdGFzdG9yZQ==", b64);
+    gd = gd.replaceAll(BASE_BUNDLE_ID, bundle).replaceAll("https://www.boomlings.com/database", url).replaceAll("aHR0cDovL3d3dy5ib29tbGluZ3MuY29tL2RhdGFiYXNl", b64);
     if (process.argv.includes("--megasa1nt")) gd = gd.replaceAll("https://www.newgrounds.com/audio/download/%i", `${url}//music/%i`);
     await fs.promises.writeFile(`${path}/${name}`, gd, 'binary');
 
